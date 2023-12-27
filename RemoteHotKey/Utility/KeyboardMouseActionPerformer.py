@@ -1,3 +1,4 @@
+import enum
 import threading
 import time
 from typing import Tuple
@@ -5,6 +6,20 @@ from typing import Tuple
 import numpy
 
 from RemoteHotKey.Utility.ActionPerformer import ActionPerformer
+
+
+class MouseActions(enum.Enum):
+    LeftClick = 1
+    RightClick = 2
+    MoveMouseTo = 3
+    MoveMouseBy = 4
+    MouseScroll = 5
+
+
+class KeyboardActions(enum.Enum):
+    TapKeyboard = 1
+    keyDown = 2
+    keyUp = 3
 
 
 class KeyboardMouseActionPerformer(ActionPerformer):
